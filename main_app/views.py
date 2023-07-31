@@ -5,6 +5,7 @@ from django.shortcuts import render
 finches = [
   {'name': 'Cactus', 'breed': 'Hawfinch', 'scientific_name': 'Coccothraustes coccothraustes', 'age': 3},
   {'name': 'Mochi', 'breed': 'Purple Finch', 'scientific_name': 'Haemorhous purpureus', 'age': 0},
+  {'name': 'Spoon', 'breed': 'Eurasian bullfinch', 'scientific_name': 'Pyrrhula pyrrhula', 'age': 1},
 ]
 
 def home(request):
