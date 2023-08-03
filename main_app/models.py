@@ -7,11 +7,23 @@ MEALS = (
       ('D', 'Dinner')
 )
 
+class Seed(models.Model):
+  name = models.CharField(max_length=50)
+  color = models.CharField(max_length=20)
+
+  def __str__(self):
+    return self.name
+
+  def get_absolute_url(self):
+    return reverse('seeds_detail', kwargs={'pk': self.id})
+
 # Create your models here.
 class Finch(models.Model):
     name = models.CharField(max_length=100)
     breed = models.CharField(max_length=100)
     scientific_name = models.TextField(max_length=250)
+
+    seeds = models.ManyToManyField(Seed)
     
     def __str__(self):
             return self.name
